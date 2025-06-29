@@ -1,100 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Scavenger Hunt</title>
-  <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <title>Scavenger Hunt 🎯</title>
   <style>
-    body {
+    html, body {
       margin: 0;
-      padding: 50px 20px;
-      font-family: 'Quicksand', sans-serif;
-      background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+      padding: 0;
+      font-family: 'Georgia', serif;
+      background: linear-gradient(135deg, #1a1a2e, #2d005f, #4b0082, #1a1a2e);
+      background-size: 400% 400%;
+      animation: gradientRoyal 15s ease infinite;
       text-align: center;
-      color: #222;
+      color: #f6e05e;
+      height: 100%;
       overflow-x: hidden;
     }
 
-    h1 {
-      font-family: 'Luckiest Guy', cursive;
-      font-size: 3.5em;
-      color: #ff5e57;
-      animation: bounceIn 1.2s ease;
-      margin-bottom: 10px;
+    @keyframes gradientRoyal {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
 
-    @keyframes bounceIn {
-      0% { transform: scale(0.3); opacity: 0; }
-      50% { transform: scale(1.1); }
-      70% { transform: scale(0.9); }
-      100% { transform: scale(1); opacity: 1; }
+    h1 {
+      font-size: 3.6em;
+      margin-top: 70px;
+      color: #ffd700;
+      text-shadow: 0 0 10px #ffdf70, 0 0 20px #cbb26a;
+      animation: floatText 4s ease-in-out infinite;
     }
 
     p {
       font-size: 1.2em;
-      max-width: 700px;
-      margin: 0 auto 30px;
-      background: #ffe082;
-      padding: 20px;
-      border-radius: 15px;
-      animation: slideFade 1.5s ease-in-out;
+      margin: 20px auto;
+      width: 85%;
+      color: #fefcbf;
     }
 
     .clue-box {
+      background: rgba(255, 255, 255, 0.07);
+      backdrop-filter: blur(8px);
+      padding: 30px;
+      border: 3px dashed #ffd700;
+      border-radius: 18px;
+      box-shadow: 0 0 25px rgba(255, 215, 0, 0.3);
       display: inline-block;
       margin-top: 30px;
-      padding: 30px;
-      background: linear-gradient(145deg, #8ec5fc, #e0c3fc);
-      border-radius: 15px;
-      font-size: 1.3em;
-      line-height: 1.6em;
-      color: #222;
-      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-      animation: floatUp 2s ease-in-out;
+      color: #fff8dc;
+      animation: pulseBox 6s infinite;
+      max-width: 700px;
+      font-size: 1.25em;
     }
 
-    @keyframes slideFade {
-      from { transform: translateY(20px); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
+    @keyframes pulseBox {
+      0% { box-shadow: 0 0 20px rgba(255, 215, 0, 0.1); }
+      50% { box-shadow: 0 0 40px rgba(255, 215, 0, 0.3); }
+      100% { box-shadow: 0 0 20px rgba(255, 215, 0, 0.1); }
     }
 
-    @keyframes floatUp {
-      0% { transform: translateY(30px); opacity: 0; }
-      100% { transform: translateY(0); opacity: 1; }
-    }
-
-    .footer {
-      margin-top: 50px;
-      font-size: 1.1em;
-      color: #555;
-      background-color: #b2ebf2;
+    .button {
       display: inline-block;
-      padding: 15px 30px;
+      margin-top: 50px;
+      padding: 14px 32px;
+      background-color: #6b46c1;
+      color: #fff;
+      border: 2px solid #d6bcfa;
       border-radius: 10px;
-      font-weight: 600;
-      animation: pulse 2s infinite ease-in-out;
+      font-size: 1.1em;
+      font-weight: bold;
+      text-shadow: 1px 1px 3px #000;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+      text-decoration: none;
+      transition: all 0.3s ease;
+      animation: floatButton 5s ease-in-out infinite;
     }
 
-    @keyframes pulse {
-      0%, 100% { transform: scale(1); background-color: #b2ebf2; }
-      50% { transform: scale(1.05); background-color: #80deea; }
+    .button:hover {
+      background-color: #553c9a;
+      transform: scale(1.05);
     }
 
-    audio {
-      margin-top: 40px;
-      border-radius: 12px;
-      outline: none;
+    @keyframes floatText {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+    }
+
+    @keyframes floatButton {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-4px); }
+    }
+
+    .shape {
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      background: radial-gradient(circle at center, gold, transparent 70%);
+      border-radius: 50%;
+      opacity: 0.15;
+      animation: floatShape 20s linear infinite;
+    }
+
+    .shape1 { top: 10%; left: 5%; animation-delay: 0s; }
+    .shape2 { top: 75%; left: 10%; animation-delay: 4s; }
+    .shape3 { top: 50%; right: 5%; animation-delay: 7s; }
+    .shape4 { top: 30%; right: 15%; animation-delay: 2s; }
+    .shape5 { bottom: 5%; left: 50%; animation-delay: 6s; }
+
+    @keyframes floatShape {
+      0%   { transform: translateY(0) rotate(0deg); }
+      50%  { transform: translateY(-20px) rotate(180deg); }
+      100% { transform: translateY(0) rotate(360deg); }
     }
   </style>
 </head>
 <body>
 
-  <h1>🔍 Welcome to the Scavenger Hunt!</h1>
-  
+  <!-- Royal floating shapes -->
+  <div class="shape shape1"></div>
+  <div class="shape shape2"></div>
+  <div class="shape shape3"></div>
+  <div class="shape shape4"></div>
+  <div class="shape shape5"></div>
+
+  <h1>🔍 Scavenger Hunt Begins!</h1>
+
   <p>
-    Follow the clues carefully. Look around, be curious, and scan wisely.<br>
-    📸 Take a picture with your group at each clue as proof!<br>
-    (Good luck, don’t cheat... 😤 – <strong>Akeef</strong>)
+    Welcome, brave hunters! Your mission is simple: decode the clues, visit the spots, and document each discovery.  
+    <br><br>
+    📸 Take a group selfie at every clue location as proof.  
+    <br>
+    🎁 Hidden rewards await those who seek!
   </p>
 
   <div class="clue-box">
@@ -102,18 +138,8 @@
     Start where brews and beans are poured,<br>
     Say the phrase to earn reward:<br><br>
     <em>“The hunt begins, we’re wide awake!”</em><br><br>
-    And you'd be given what’s at stake.
+    And you'll receive what’s at stake.
   </div>
-
-  <div class="footer">
-    🎯 Clue 2 awaits... Seek and you shall find.
-  </div>
-
-  <!-- 🎵 Audio Only Background Music (YouTube to MP3 recommended for autoplay) -->
-  <audio controls autoplay loop>
-    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
-    Your browser does not support the audio tag.
-  </audio>
 
 </body>
 </html>
