@@ -8,9 +8,9 @@
       margin: 0;
       padding: 0;
       font-family: 'Georgia', serif;
-      background: linear-gradient(135deg, #00587C, #6DC3D4, #F39200, #999999);
+      background: linear-gradient(135deg, #ff00ff, #00ffff, #ccff00, #00ccff);
       background-size: 400% 400%;
-      animation: gradientFlow 15s ease infinite;
+      animation: gradientFlow 4s linear infinite;
       text-align: center;
       height: 100%;
       overflow-x: hidden;
@@ -24,7 +24,7 @@
 
     /* UNITAR Logo */
     img.logo {
-      width: 320px;
+      width: 400px;
       margin-top: 30px;
       animation: fadeInLogo 2s ease;
     }
@@ -72,37 +72,9 @@
       100% { box-shadow: 0 0 20px rgba(255, 255, 255, 0.2); }
     }
 
-    .button {
-      display: inline-block;
-      margin-top: 50px;
-      padding: 14px 32px;
-      background-color: rgba(255, 255, 255, 0.2);
-      color: white;
-      border: 2px solid white;
-      border-radius: 10px;
-      font-size: 1.1em;
-      font-weight: bold;
-      text-shadow: 1px 1px 3px #000;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-      text-decoration: none;
-      transition: all 0.3s ease;
-      animation: floatButton 5s ease-in-out infinite;
-      mix-blend-mode: difference;
-    }
-
-    .button:hover {
-      background-color: rgba(255, 255, 255, 0.3);
-      transform: scale(1.05);
-    }
-
     @keyframes floatText {
       0%, 100% { transform: translateY(0); }
       50% { transform: translateY(-5px); }
-    }
-
-    @keyframes floatButton {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-4px); }
     }
 
     /* Floating glowing shapes */
@@ -156,7 +128,6 @@
     <em>“The hunt begins, we’re wide awake!”</em><br><br>
     And you'll receive what’s at stake.
   </div>
-
 
 </body>
 </html>
