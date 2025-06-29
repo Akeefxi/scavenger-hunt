@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>UNITAR Scavenger Hunt 🎯</title>
   <style>
     html, body {
@@ -22,9 +22,8 @@
       100% { background-position: 0% 50%; }
     }
 
-    /* UNITAR Logo */
     img.logo {
-      width: 400px;
+      width: 480px;
       margin-top: 30px;
       animation: fadeInLogo 2s ease;
     }
@@ -34,7 +33,6 @@
       to { opacity: 1; transform: scale(1); }
     }
 
-    /* Inverted Text Effect */
     .invert-text {
       mix-blend-mode: difference;
       color: white;
@@ -77,38 +75,39 @@
       50% { transform: translateY(-5px); }
     }
 
-    /* Floating glowing shapes */
-    .shape {
+    /* 3D animated shapes with inverted colors */
+    .shape3d {
       position: absolute;
       width: 60px;
       height: 60px;
-      background: radial-gradient(circle at center, white, transparent 70%);
       border-radius: 50%;
-      opacity: 0.12;
-      animation: floatShape 20s linear infinite;
+      background: white;
+      mix-blend-mode: difference;
+      opacity: 0.2;
+      animation: spin3d 8s linear infinite;
     }
 
-    .shape1 { top: 10%; left: 5%; animation-delay: 0s; }
-    .shape2 { top: 75%; left: 10%; animation-delay: 4s; }
-    .shape3 { top: 50%; right: 5%; animation-delay: 7s; }
-    .shape4 { top: 30%; right: 15%; animation-delay: 2s; }
-    .shape5 { bottom: 5%; left: 50%; animation-delay: 6s; }
-
-    @keyframes floatShape {
-      0%   { transform: translateY(0) rotate(0deg); }
-      50%  { transform: translateY(-20px) rotate(180deg); }
-      100% { transform: translateY(0) rotate(360deg); }
+    @keyframes spin3d {
+      0% { transform: rotateX(0deg) rotateY(0deg) scale(1); }
+      50% { transform: rotateX(180deg) rotateY(180deg) scale(1.3); }
+      100% { transform: rotateX(360deg) rotateY(360deg) scale(1); }
     }
+
+    .shape3d1 { top: 15%; left: 10%; animation-delay: 0s; }
+    .shape3d2 { top: 60%; left: 5%; animation-delay: 1s; }
+    .shape3d3 { top: 45%; right: 5%; animation-delay: 2s; }
+    .shape3d4 { bottom: 10%; right: 10%; animation-delay: 3s; }
+    .shape3d5 { top: 30%; left: 50%; animation-delay: 4s; }
   </style>
 </head>
 <body>
 
-  <!-- Floating ornaments -->
-  <div class="shape shape1"></div>
-  <div class="shape shape2"></div>
-  <div class="shape shape3"></div>
-  <div class="shape shape4"></div>
-  <div class="shape shape5"></div>
+  <!-- 3D Color-Inverting Animated Shapes -->
+  <div class="shape3d shape3d1"></div>
+  <div class="shape3d shape3d2"></div>
+  <div class="shape3d shape3d3"></div>
+  <div class="shape3d shape3d4"></div>
+  <div class="shape3d shape3d5"></div>
 
   <!-- UNITAR Logo -->
   <img src="unitar-logo_bb20e8c5d41b3334666685acc99c0597.png" alt="UNITAR Logo" class="logo">
