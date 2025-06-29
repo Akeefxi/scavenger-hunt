@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Scavenger Hunt</title>
+  <title>UNITAR Scavenger Hunt 🎯</title>
   <style>
     html, body {
       margin: 0;
@@ -12,7 +12,6 @@
       background-size: 400% 400%;
       animation: gradientFlow 15s ease infinite;
       text-align: center;
-      color: #ffffff;
       height: 100%;
       overflow-x: hidden;
     }
@@ -23,8 +22,9 @@
       100% { background-position: 0% 50%; }
     }
 
+    /* UNITAR Logo */
     img.logo {
-      width: 220px;
+      width: 320px;
       margin-top: 30px;
       animation: fadeInLogo 2s ease;
     }
@@ -34,11 +34,15 @@
       to { opacity: 1; transform: scale(1); }
     }
 
+    /* Inverted Text Effect */
+    .invert-text {
+      mix-blend-mode: difference;
+      color: white;
+    }
+
     h1 {
       font-size: 3.6em;
       margin-top: 20px;
-      color: #F39200;
-      text-shadow: 0 0 10px #fff1d6, 0 0 20px #f8b64c;
       animation: floatText 4s ease-in-out infinite;
     }
 
@@ -46,37 +50,35 @@
       font-size: 1.2em;
       margin: 20px auto;
       width: 85%;
-      color: #ffffff;
     }
 
     .clue-box {
-      background: rgba(0, 88, 124, 0.2);
-      backdrop-filter: blur(8px);
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
       padding: 30px;
-      border: 3px dashed #F39200;
+      border: 3px dashed white;
       border-radius: 18px;
-      box-shadow: 0 0 25px rgba(243, 146, 0, 0.3);
+      box-shadow: 0 0 25px rgba(255, 255, 255, 0.3);
       display: inline-block;
       margin-top: 30px;
-      color: #fff8dc;
       animation: pulseBox 6s infinite;
       max-width: 700px;
       font-size: 1.25em;
     }
 
     @keyframes pulseBox {
-      0% { box-shadow: 0 0 20px rgba(243, 146, 0, 0.2); }
-      50% { box-shadow: 0 0 40px rgba(243, 146, 0, 0.4); }
-      100% { box-shadow: 0 0 20px rgba(243, 146, 0, 0.2); }
+      0% { box-shadow: 0 0 20px rgba(255, 255, 255, 0.2); }
+      50% { box-shadow: 0 0 40px rgba(255, 255, 255, 0.4); }
+      100% { box-shadow: 0 0 20px rgba(255, 255, 255, 0.2); }
     }
 
     .button {
       display: inline-block;
       margin-top: 50px;
       padding: 14px 32px;
-      background-color: #F39200;
-      color: #fff;
-      border: 2px solid #ffffff;
+      background-color: rgba(255, 255, 255, 0.2);
+      color: white;
+      border: 2px solid white;
       border-radius: 10px;
       font-size: 1.1em;
       font-weight: bold;
@@ -85,10 +87,11 @@
       text-decoration: none;
       transition: all 0.3s ease;
       animation: floatButton 5s ease-in-out infinite;
+      mix-blend-mode: difference;
     }
 
     .button:hover {
-      background-color: #c97500;
+      background-color: rgba(255, 255, 255, 0.3);
       transform: scale(1.05);
     }
 
@@ -102,13 +105,14 @@
       50% { transform: translateY(-4px); }
     }
 
+    /* Floating glowing shapes */
     .shape {
       position: absolute;
       width: 60px;
       height: 60px;
-      background: radial-gradient(circle at center, #F39200, transparent 70%);
+      background: radial-gradient(circle at center, white, transparent 70%);
       border-radius: 50%;
-      opacity: 0.15;
+      opacity: 0.12;
       animation: floatShape 20s linear infinite;
     }
 
@@ -137,21 +141,22 @@
   <!-- UNITAR Logo -->
   <img src="unitar-logo_bb20e8c5d41b3334666685acc99c0597.png" alt="UNITAR Logo" class="logo">
 
-  <h1>🔍 Scavenger Hunt Begins!</h1>
+  <h1 class="invert-text">The Hunt Begins!</h1>
 
-  <p>
-    Welcome to UNITAR's scavenger hunt! Your task is simple:<br>
+  <p class="invert-text">
+    Your task is simple:<br>
     Follow the clues, discover each location, and take a group selfie at every spot.<br><br>
-    🥚 Seek and you shall find it!
+    🥚 Seek and you shall find.
   </p>
 
-  <div class="clue-box">
+  <div class="clue-box invert-text">
     <strong>Clue 1:</strong><br><br>
     Start where brews and beans are poured,<br>
     Say the phrase to earn reward:<br><br>
     <em>“The hunt begins, we’re wide awake!”</em><br><br>
     And you'll receive what’s at stake.
   </div>
+
 
 </body>
 </html>
