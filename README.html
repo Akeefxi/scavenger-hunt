@@ -1,76 +1,109 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8" />
   <title>Scavenger Hunt</title>
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
-      background-color: #fefefe;
-      color: #2c3e50;
+      background-image: url('https://images.unsplash.com/photo-1517685352821-92cf88aee5a5');
+      background-size: cover;
+      background-position: center;
+      color: #fff;
       text-align: center;
-      padding: 50px;
+      padding: 60px 20px;
+      backdrop-filter: blur(6px);
     }
 
     h1 {
-      font-size: 3em;
+      font-size: 3.5em;
       margin-bottom: 10px;
+      animation: popIn 1s ease-in-out;
+    }
+
+    @keyframes popIn {
+      0% { transform: scale(0.8); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
     }
 
     p {
-      font-size: 1.1em;
+      font-size: 1.2em;
       margin-top: 0;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      background-color: rgba(0, 0, 0, 0.4);
+      padding: 15px;
+      border-radius: 10px;
     }
 
     .clue-box {
       margin-top: 40px;
       padding: 30px;
-      background-color: #e0f7fa;
+      background-color: rgba(255, 255, 255, 0.85);
+      color: #333;
       border-left: 6px solid #00796b;
       border-radius: 10px;
       display: inline-block;
-      max-width: 600px;
-      font-size: 1.2em;
+      max-width: 700px;
+      font-size: 1.3em;
       line-height: 1.6em;
       white-space: pre-line;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      animation: fadeIn 1.5s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     .footer {
       margin-top: 60px;
-      font-size: 0.9em;
-      color: #777;
+      font-size: 1em;
+      color: #eee;
+      background-color: rgba(0, 0, 0, 0.5);
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 8px;
     }
 
-    /* Hidden Easter egg link */
-    .easter-egg {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      width: 20px;
-      height: 20px;
-      opacity: 0;
-      z-index: 10;
+    iframe {
+      margin-top: 40px;
+      border-radius: 12px;
     }
   </style>
 </head>
 <body>
 
   <h1>🔍 Welcome to the Scavenger Hunt!</h1>
+  
   <p>
-    Follow the clues carefully. Look around, be curious, and scan wisely. Take a picture with your group for each clues you find for proof! (Don't cheat.. I worked hard on this -Akeef :p)
+    Follow the clues carefully. Look around, be curious, and scan wisely.<br>
+    📸 Take a picture with your group at each clue as proof!<br>
+    (Good luck, don’t cheat... 😤 -<strong>Akeef</strong>)
   </p>
 
   <div class="clue-box">
     <strong>Clue 1:</strong><br><br>
-    Start where brews and beans are poured,  <br>
-    Say the phrase to earn reward.  <br>
-   ‘The hunt begins, we’re wide awake!’  <br>
-    And it'd be given what’s at stake."
+    Start where brews and beans are poured,<br>
+    Say the phrase to earn reward:<br><br>
+    <em>“The hunt begins, we’re wide awake!”</em><br><br>
+    And you'd be given what’s at stake.
   </div>
 
   <div class="footer">
-    Clue 2 awaits... Seek and you shall find.
+    🎯 Clue 2 awaits... Seek and you shall find.
   </div>
 
+  <!-- 🎵 Optional: Ambient background YouTube music -->
+  <iframe width="300" height="170"
+    src="https://www.youtube.com/watch?v=Av1dt8L4WtQ"
+    title="Chill Hunt Music"
+    frameborder="0"
+    allow="autoplay; encrypted-media"
+    allowfullscreen>
+  </iframe>
 
 </body>
 </html>
