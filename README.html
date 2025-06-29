@@ -2,32 +2,43 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Scavenger Hunt 🎯</title>
+  <title>UNITAR Scavenger Hunt 🎯</title>
   <style>
     html, body {
       margin: 0;
       padding: 0;
       font-family: 'Georgia', serif;
-      background: linear-gradient(135deg, #1a1a2e, #2d005f, #4b0082, #1a1a2e);
+      background: linear-gradient(135deg, #00587C, #6DC3D4, #F39200, #999999);
       background-size: 400% 400%;
-      animation: gradientRoyal 15s ease infinite;
+      animation: gradientFlow 15s ease infinite;
       text-align: center;
-      color: #f6e05e;
+      color: #ffffff;
       height: 100%;
       overflow-x: hidden;
     }
 
-    @keyframes gradientRoyal {
+    @keyframes gradientFlow {
       0% { background-position: 0% 50%; }
       50% { background-position: 100% 50%; }
       100% { background-position: 0% 50%; }
     }
 
+    img.logo {
+      width: 220px;
+      margin-top: 30px;
+      animation: fadeInLogo 2s ease;
+    }
+
+    @keyframes fadeInLogo {
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
     h1 {
       font-size: 3.6em;
-      margin-top: 70px;
-      color: #ffd700;
-      text-shadow: 0 0 10px #ffdf70, 0 0 20px #cbb26a;
+      margin-top: 20px;
+      color: #F39200;
+      text-shadow: 0 0 10px #fff1d6, 0 0 20px #f8b64c;
       animation: floatText 4s ease-in-out infinite;
     }
 
@@ -35,16 +46,16 @@
       font-size: 1.2em;
       margin: 20px auto;
       width: 85%;
-      color: #fefcbf;
+      color: #ffffff;
     }
 
     .clue-box {
-      background: rgba(255, 255, 255, 0.07);
+      background: rgba(0, 88, 124, 0.2);
       backdrop-filter: blur(8px);
       padding: 30px;
-      border: 3px dashed #ffd700;
+      border: 3px dashed #F39200;
       border-radius: 18px;
-      box-shadow: 0 0 25px rgba(255, 215, 0, 0.3);
+      box-shadow: 0 0 25px rgba(243, 146, 0, 0.3);
       display: inline-block;
       margin-top: 30px;
       color: #fff8dc;
@@ -54,30 +65,30 @@
     }
 
     @keyframes pulseBox {
-      0% { box-shadow: 0 0 20px rgba(255, 215, 0, 0.1); }
-      50% { box-shadow: 0 0 40px rgba(255, 215, 0, 0.3); }
-      100% { box-shadow: 0 0 20px rgba(255, 215, 0, 0.1); }
+      0% { box-shadow: 0 0 20px rgba(243, 146, 0, 0.2); }
+      50% { box-shadow: 0 0 40px rgba(243, 146, 0, 0.4); }
+      100% { box-shadow: 0 0 20px rgba(243, 146, 0, 0.2); }
     }
 
     .button {
       display: inline-block;
       margin-top: 50px;
       padding: 14px 32px;
-      background-color: #6b46c1;
+      background-color: #F39200;
       color: #fff;
-      border: 2px solid #d6bcfa;
+      border: 2px solid #ffffff;
       border-radius: 10px;
       font-size: 1.1em;
       font-weight: bold;
       text-shadow: 1px 1px 3px #000;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
       text-decoration: none;
       transition: all 0.3s ease;
       animation: floatButton 5s ease-in-out infinite;
     }
 
     .button:hover {
-      background-color: #553c9a;
+      background-color: #c97500;
       transform: scale(1.05);
     }
 
@@ -95,7 +106,7 @@
       position: absolute;
       width: 60px;
       height: 60px;
-      background: radial-gradient(circle at center, gold, transparent 70%);
+      background: radial-gradient(circle at center, #F39200, transparent 70%);
       border-radius: 50%;
       opacity: 0.15;
       animation: floatShape 20s linear infinite;
@@ -116,21 +127,22 @@
 </head>
 <body>
 
-  <!-- Royal floating shapes -->
+  <!-- Floating ornaments -->
   <div class="shape shape1"></div>
   <div class="shape shape2"></div>
   <div class="shape shape3"></div>
   <div class="shape shape4"></div>
   <div class="shape shape5"></div>
 
+  <!-- UNITAR Logo -->
+  <img src="unitar-logo_bb20e8c5d41b3334666685acc99c0597.png" alt="UNITAR Logo" class="logo">
+
   <h1>🔍 Scavenger Hunt Begins!</h1>
 
   <p>
-    Welcome, brave hunters! Your mission is simple: decode the clues, visit the spots, and document each discovery.  
-    <br><br>
-    📸 Take a group selfie at every clue location as proof.  
-    <br>
-    🎁 Hidden rewards await those who seek!
+    Welcome to UNITAR's scavenger hunt! Your task is simple:<br>
+    Follow the clues, discover each location, and take a group selfie at every spot.<br><br>
+    🥚 Seek and you shall find it!
   </p>
 
   <div class="clue-box">
