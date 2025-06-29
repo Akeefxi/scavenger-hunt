@@ -3,74 +3,87 @@
 <head>
   <meta charset="UTF-8" />
   <title>Scavenger Hunt</title>
+  <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
-      background-image: url('https://images.unsplash.com/photo-1517685352821-92cf88aee5a5');
-      background-size: cover;
-      background-position: center;
-      color: #fff;
+      margin: 0;
+      padding: 50px 20px;
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
       text-align: center;
-      padding: 60px 20px;
-      backdrop-filter: blur(6px);
+      color: #222;
+      overflow-x: hidden;
     }
 
     h1 {
+      font-family: 'Luckiest Guy', cursive;
       font-size: 3.5em;
+      color: #ff5e57;
+      animation: bounceIn 1.2s ease;
       margin-bottom: 10px;
-      animation: popIn 1s ease-in-out;
     }
 
-    @keyframes popIn {
-      0% { transform: scale(0.8); opacity: 0; }
+    @keyframes bounceIn {
+      0% { transform: scale(0.3); opacity: 0; }
+      50% { transform: scale(1.1); }
+      70% { transform: scale(0.9); }
       100% { transform: scale(1); opacity: 1; }
     }
 
     p {
       font-size: 1.2em;
-      margin-top: 0;
       max-width: 700px;
-      margin-left: auto;
-      margin-right: auto;
-      background-color: rgba(0, 0, 0, 0.4);
-      padding: 15px;
-      border-radius: 10px;
+      margin: 0 auto 30px;
+      background: #ffe082;
+      padding: 20px;
+      border-radius: 15px;
+      animation: slideFade 1.5s ease-in-out;
     }
 
     .clue-box {
-      margin-top: 40px;
-      padding: 30px;
-      background-color: rgba(255, 255, 255, 0.85);
-      color: #333;
-      border-left: 6px solid #00796b;
-      border-radius: 10px;
       display: inline-block;
-      max-width: 700px;
+      margin-top: 30px;
+      padding: 30px;
+      background: linear-gradient(145deg, #8ec5fc, #e0c3fc);
+      border-radius: 15px;
       font-size: 1.3em;
       line-height: 1.6em;
-      white-space: pre-line;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-      animation: fadeIn 1.5s ease;
+      color: #222;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      animation: floatUp 2s ease-in-out;
     }
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
+    @keyframes slideFade {
+      from { transform: translateY(20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes floatUp {
+      0% { transform: translateY(30px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
     }
 
     .footer {
-      margin-top: 60px;
-      font-size: 1em;
-      color: #eee;
-      background-color: rgba(0, 0, 0, 0.5);
+      margin-top: 50px;
+      font-size: 1.1em;
+      color: #555;
+      background-color: #b2ebf2;
       display: inline-block;
-      padding: 10px 20px;
-      border-radius: 8px;
+      padding: 15px 30px;
+      border-radius: 10px;
+      font-weight: 600;
+      animation: pulse 2s infinite ease-in-out;
     }
 
-    iframe {
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); background-color: #b2ebf2; }
+      50% { transform: scale(1.05); background-color: #80deea; }
+    }
+
+    audio {
       margin-top: 40px;
       border-radius: 12px;
+      outline: none;
     }
   </style>
 </head>
@@ -81,7 +94,7 @@
   <p>
     Follow the clues carefully. Look around, be curious, and scan wisely.<br>
     📸 Take a picture with your group at each clue as proof!<br>
-    (Good luck, don’t cheat... 😤 -<strong>Akeef</strong>)
+    (Good luck, don’t cheat... 😤 – <strong>Akeef</strong>)
   </p>
 
   <div class="clue-box">
@@ -96,14 +109,11 @@
     🎯 Clue 2 awaits... Seek and you shall find.
   </div>
 
-  <!-- 🎵 Optional: Ambient background YouTube music -->
-  <iframe width="300" height="170"
-    src="https://www.youtube.com/watch?v=Av1dt8L4WtQ"
-    title="Chill Hunt Music"
-    frameborder="0"
-    allow="autoplay; encrypted-media"
-    allowfullscreen>
-  </iframe>
+  <!-- 🎵 Audio Only Background Music (YouTube to MP3 recommended for autoplay) -->
+  <audio controls autoplay loop>
+    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+    Your browser does not support the audio tag.
+  </audio>
 
 </body>
 </html>
