@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Clue 6</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      color: #fff;
+      text-align: center;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    body {
+      background: linear-gradient(-45deg, #2c3e50, #4ca1af, #2c3e50, #4ca1af);
+      background-size: 400% 400%;
+      animation: backgroundShift 15s ease infinite;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 30px;
+    }
+
+    h1 {
+      font-size: 3.5em;
+      color: #ffd700;
+      margin-bottom: 20px;
+      animation: glow 2s ease-in-out infinite alternate;
+      text-shadow: 0 0 5px #fff;
+    }
+
+    .clue-box {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 35px 40px;
+      border-radius: 20px;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+      max-width: 700px;
+      font-size: 1.4em;
+      line-height: 1.8em;
+      backdrop-filter: blur(8px);
+      animation: fadeIn 2s ease, float 4s ease-in-out infinite;
+    }
+
+    .hint {
+      margin-top: 30px;
+      font-size: 1.1em;
+      font-style: italic;
+      color: #eeeeee;
+      animation: fadeIn 3.5s ease;
+    }
+
+    @keyframes backgroundShift {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 10px #ffd700, 0 0 20px #ffd700;
+      }
+      to {
+        text-shadow: 0 0 20px #ffff99, 0 0 30px #ffff99;
+      }
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Clue 6</h1>
+
+  <div class="clue-box">
+    A master of silence, it stalks the wall, <br>
+    With limbs of guidance, it rarely falls. <br><br>
+    Its form is known in nature’s lore, <br>
+    Now climb to the floor, no more, no less.
+  </div>
+
+  <div class="hint">Hint: the limbs of that creature!</div>
+
+</body>
+</html>
