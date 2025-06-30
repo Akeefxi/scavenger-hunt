@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Clue 3</title>
+  <style>
+    body {
+      background-color: #fffbea;
+      font-family: 'Arial', sans-serif;
+      max-width: 700px;
+      margin: 80px auto;
+      padding: 30px;
+      color: #333;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #d85c27;
+    }
+    .riddle {
+      font-size: 1.2em;
+      margin: 20px 0;
+    }
+    .note {
+      background-color: #fce8d5;
+      padding: 15px;
+      border-left: 6px solid #ffa94d;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <h1>Clue 3</h1>
+  <p class="riddle">
+    A space to rehearse, reflect, and grow,<br>
+    In groups we talk, in lights we glow.<br>
+    To find the floor where skills are trained,<br>
+    Seek where the victim of 7 resided.
+  </p>
+
+  <div class="note">
+    P.s last one!! :D
+  </div>
+</body>
+</html>
