@@ -2,129 +2,124 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>UNITAR Scavenger Hunt 🎯</title>
   <style>
-    html, body {
+    :root {
+      --bg-color: #0c0c0c;
+      --text-color: #ffffff;
+      --accent: #4fffd9;
+    }
+
+    * {
       margin: 0;
       padding: 0;
-      font-family: 'Georgia', serif;
-      background-color: #000;
-      color: white;
-      text-align: center;
-      height: 100%;
-      overflow-x: hidden;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: start;
+      min-height: 100vh;
+      padding: 40px 20px;
     }
 
     img.logo {
-      width: 220px;
-      margin-top: 30px;
-      animation: fadeInLogo 2s ease;
-    }
-
-    @keyframes fadeInLogo {
-      from { opacity: 0; transform: scale(0.9); }
-      to { opacity: 1; transform: scale(1); }
+      width: 180px;
+      margin-bottom: 25px;
+      filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.2));
     }
 
     h1 {
-      font-size: 3.6em;
-      margin-top: 20px;
-      animation: floatText 4s ease-in-out infinite;
+      font-size: 2.8em;
+      margin-bottom: 10px;
+      text-align: center;
+      animation: float 4s ease-in-out infinite;
+      color: var(--accent);
     }
 
-    @keyframes floatText {
+    @keyframes float {
       0%, 100% { transform: translateY(0); }
       50% { transform: translateY(-5px); }
     }
 
     p {
-      font-size: 1.2em;
-      margin: 20px auto;
-      width: 85%;
+      font-size: 1.15em;
+      margin: 10px 0 25px;
+      text-align: center;
+      max-width: 600px;
+      line-height: 1.6;
     }
-
-    .invert-text {
-      mix-blend-mode: difference;
-      color: white;
-    }
-
-    .clue-box {
-      background: rgba(255, 255, 255, 0.08);
-      backdrop-filter: blur(10px);
-      padding: 30px;
-      border: 2px solid white;
-      border-radius: 15px;
-      box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
-      display: inline-block;
-      margin-top: 30px;
-      max-width: 700px;
-      font-size: 1.25em;
-    }
-
-    .shape3d {
-      position: absolute;
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      background: white;
-      mix-blend-mode: difference;
-      opacity: 0.1;
-      animation: spin3d 12s linear infinite;
-    }
-
-    @keyframes spin3d {
-      0% { transform: rotateX(0deg) rotateY(0deg) scale(1); }
-      50% { transform: rotateX(180deg) rotateY(180deg) scale(1.3); }
-      100% { transform: rotateX(360deg) rotateY(360deg) scale(1); }
-    }
-
-    .shape3d1 { top: 15%; left: 10%; animation-delay: 0s; }
-    .shape3d2 { top: 60%; left: 5%; animation-delay: 1s; }
-    .shape3d3 { top: 45%; right: 5%; animation-delay: 2s; }
-    .shape3d4 { bottom: 10%; right: 10%; animation-delay: 3s; }
-    .shape3d5 { top: 30%; left: 50%; animation-delay: 4s; }
 
     .blink {
-      animation: blink 1.2s steps(2, start) infinite;
+      animation: blink 1.3s steps(2, start) infinite;
+      font-weight: bold;
     }
 
     @keyframes blink {
       to { visibility: hidden; }
     }
 
-    .noselect {
-      user-select: none;
+    .clue-box {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 12px;
+      padding: 30px;
+      max-width: 700px;
+      width: 100%;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      margin-top: 20px;
+    }
+
+    .clue-box strong {
+      font-size: 1.4em;
+      display: block;
+      margin-bottom: 15px;
+      color: var(--accent);
+    }
+
+    .clue-box em {
+      color: #ffd27d;
+      font-style: italic;
+    }
+
+    footer {
+      margin-top: 50px;
+      font-size: 0.9em;
+      opacity: 0.4;
     }
   </style>
 </head>
 <body>
 
-  <!-- 3D animated shapes -->
-  <div class="shape3d shape3d1"></div>
-  <div class="shape3d shape3d2"></div>
-  <div class="shape3d shape3d3"></div>
-  <div class="shape3d shape3d4"></div>
-  <div class="shape3d shape3d5"></div>
+  <img src="unitar-logo_bb20e8c5d41b3334666685acc99c0597.png" alt="UNITAR Logo" class="logo" />
 
-  <!-- UNITAR Logo -->
-  <img src="unitar-logo_bb20e8c5d41b3334666685acc99c0597.png" alt="UNITAR Logo" class="logo">
+  <h1>The Hunt Begins!</h1>
 
-  <h1 class="invert-text">The Hunt Begins!</h1>
-
-  <p class="invert-text">
-    <br>Your task is simple:<br>
-    <br>Follow the clues, discover each location, and<br>
-    <div class="noselect"><span class="blink">take a group selfie at every spot.</span></div>
+  <p>
+    Your task is simple:<br>
+    Follow the clues, discover each location, and<br>
+    <span class="blink">take a group selfie at every spot.</span><br>
     🥚 Seek and you shall find.
   </p>
 
-  <div class="clue-box invert-text">
-    <strong>Clue 1:</strong><br><br>
+  <div class="clue-box">
+    <strong>Clue 1:</strong>
     Start where brews and beans are poured,<br>
     Say the phrase to earn reward:<br><br>
     <em>“The hunt begins, we’re wide awake!”</em><br><br>
     And you'll receive what’s at stake.
   </div>
+
+  <footer>
+    © UNITAR Scavenger Hunt · Designed with purpose.
+  </footer>
 
 </body>
 </html>
