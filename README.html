@@ -6,9 +6,9 @@
   <title>UNITAR Scavenger Hunt 🎯</title>
   <style>
     :root {
-      --bg-color: #0c0c0c;
-      --text-color: #ffffff;
-      --accent: #4fffd9;
+      --bg-color: #ffffff;
+      --text-color: #000000;
+      --accent: #007bff;
     }
 
     * {
@@ -30,17 +30,21 @@
     }
 
     img.logo {
-      width: 180px;
-      margin-bottom: 25px;
-      filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.2));
+      width: 300px;
+      margin-bottom: 30px;
+      filter: drop-shadow(0 0 12px rgba(0, 0, 0, 0.2));
     }
 
     h1 {
-      font-size: 2.8em;
-      margin-bottom: 10px;
+      font-size: 3em;
+      margin-bottom: 15px;
       text-align: center;
       animation: float 4s ease-in-out infinite;
       color: var(--accent);
+      text-shadow:
+        1px 1px 0 #aaa,
+        2px 2px 0 #999,
+        3px 3px 0 #888;
     }
 
     @keyframes float {
@@ -49,16 +53,20 @@
     }
 
     p {
-      font-size: 1.15em;
+      font-size: 1.2em;
       margin: 10px 0 25px;
       text-align: center;
       max-width: 600px;
       line-height: 1.6;
+      text-shadow:
+        1px 1px 0 #ccc,
+        2px 2px 0 #bbb;
     }
 
     .blink {
       animation: blink 1.3s steps(2, start) infinite;
       font-weight: bold;
+      color: #ff5555;
     }
 
     @keyframes blink {
@@ -66,33 +74,43 @@
     }
 
     .clue-box {
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.2);
+      background: #f9f9f9;
+      border: 2px solid #ccc;
       border-radius: 12px;
       padding: 30px;
       max-width: 700px;
       width: 100%;
-      backdrop-filter: blur(10px);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
       margin-top: 20px;
     }
 
     .clue-box strong {
-      font-size: 1.4em;
+      font-size: 1.5em;
       display: block;
       margin-bottom: 15px;
       color: var(--accent);
+      text-shadow:
+        1px 1px 0 #aaa,
+        2px 2px 0 #999;
     }
 
     .clue-box em {
-      color: #ffd27d;
+      color: #c0392b;
       font-style: italic;
+      text-shadow:
+        1px 1px 0 #eee,
+        2px 2px 0 #ddd;
     }
 
     footer {
       margin-top: 50px;
       font-size: 0.9em;
-      opacity: 0.4;
+      color: #666;
+      border-top: 1px solid #ddd;
+      padding-top: 10px;
+      width: 100%;
+      max-width: 700px;
+      text-align: center;
     }
   </style>
 </head>
