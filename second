@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Clue 2</title>
+  <style>
+    body {
+      background-color: #eaf6ff; /* Soft blue background */
+      font-family: 'Arial', sans-serif;
+      max-width: 700px;
+      margin: 80px auto;
+      padding: 30px;
+      color: #1e3a5f;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,50,0.1);
+    }
+
+    h1 {
+      color: #3478bd; /* Medium blue */
+    }
+
+    .riddle {
+      font-size: 1.2em;
+      margin: 20px 0;
+    }
+
+    .note {
+      background-color: #d8ecff; /* Lighter blue box */
+      padding: 15px;
+      border-left: 6px solid #5b9bd5; /* Darker blue accent */
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <h1>Clue 2</h1>
+  <p class="riddle">
+    Seek the space where mannequins pose,<br>
+    Or where design and drawing flows.<br>
+    A hidden scan will show the way.<br>
+  </p>
+
+  <div class="note">
+    Hint: It's where would you go for a well deserved meal.
+  </div>
+</body>
+</html>
